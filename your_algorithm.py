@@ -33,16 +33,12 @@ plt.show()
 
 
 from sklearn.neighbors import KNeighborsClassifier
-clf = KNeighborsClassifier
+clf = KNeighborsClassifier(n_neighbors=5)
 clf.fit(features_train, labels_train)
 pred = clf.predict(features_test)
 
 from sklearn.metrics import accuracy_score
 print accuracy_score(pred, labels_test)
-
-
-
-
 
 
 
